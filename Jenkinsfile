@@ -4,27 +4,57 @@ pipeline {
     stages {
         stage('Install Dependencies') {
             steps {
-                sh 'pip install -r requirements.txt'
+                script {
+                    if (isUnix()) {
+                        sh 'pip install -r requirements.txt'
+                    } else {
+                        bat 'pip install -r requirements.txt'
+                    }
+                }
             }
         }
         stage('Run Unit Tests') {
             steps {
-                sh 'python -m unittest'
+                script {
+                    if (isUnix()) {
+                        sh 'python -m unittest'
+                    } else {
+                        bat 'python -m unittest'
+                    }
+                }
             }
         }
         stage('Run Quality Tests') {
             steps {
-                sh 'python quality_tests.py'
+                script {
+                    if (isUnix()) {
+                        sh 'python quality_tests.py'
+                    } else {
+                        bat 'python quality_tests.py'
+                    }
+                }
             }
         }
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t my_ml_app:latest .'
+                script {
+                    if (isUnix()) {
+                        sh 'docker build -t my_ml_app:latest .'
+                    } else {
+                        bat 'docker build -t my_ml_app:latest .'
+                    }
+                }
             }
         }
         stage('Push Docker Image') {
             steps {
-                sh 'docker push my_ml_app:latest'
+                script {
+                    if (isUnix()) {
+                        sh 'docker push my_ml_app:latest'
+                    } else {
+                        bat 'docker push my_ml_app:latest'
+                    }
+                }
             }
         }
     }

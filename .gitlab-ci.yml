@@ -1,0 +1,38 @@
+image: python:3.8
+
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: ""
+
+services:
+  - docker:dind
+
+before_script:
+  - python -V
+  - pip install -r requirements.txt
+
+build:
+  stage: build
+  script:
+    - docker build -t my-ml-app .
+  only:
+    - master
+
+test:
+  stage: test
+  script:
+    - python -m unittest discover
+  only:
+    - master
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying the app"
+  only:
+    - master

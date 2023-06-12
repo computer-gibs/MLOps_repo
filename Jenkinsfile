@@ -19,7 +19,7 @@ pipeline {
                     if (isUnix()) {
                         sh 'py -3 -m unittest'
                     } else {
-                        bat 'py -m unittest'
+                        bat 'py -3 -m unittest'
                     }
                 }
             }

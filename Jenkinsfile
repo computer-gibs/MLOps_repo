@@ -28,9 +28,9 @@ pipeline {
             steps {
                 script {
                     if (isUnix()) {
-                        sh 'docker build -t my_ml_app:latest .'
+                        sh 'docker-compose build'
                     } else {
-                        bat 'docker build -t my_ml_app:latest .'
+                        bat 'docker-compose build'
                     }
                 }
             }
@@ -39,9 +39,9 @@ pipeline {
             steps {
                 script {
                     if (isUnix()) {
-                        sh 'docker push my_ml_app:latest'
+                        sh 'docker-compose push'
                     } else {
-                        bat 'docker push my_ml_app:latest'
+                        bat 'docker-compose push'
                     }
                 }
             }

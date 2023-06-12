@@ -1,0 +1,6 @@
+version: '3.8'
+
+services:
+  my_ml_app:
+    build: .
+    image: my_ml_app:latest

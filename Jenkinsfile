@@ -17,9 +17,9 @@ pipeline {
             steps {
                 script {
                     if (isUnix()) {
-                        sh 'py -m unittest'
+                        sh 'python3 -m unittest'
                     } else {
-                        bat 'py -m unittest'
+                        bat 'python3 -m unittest'
                     }
                 }
             }
@@ -28,9 +28,9 @@ pipeline {
             steps {
                 script {
                     if (isUnix()) {
-                        sh 'py quality_tests.py'
+                        sh 'python3 quality_tests.py'
                     } else {
-                        bat 'py quality_tests.py'
+                        bat 'python3 quality_tests.py'
                     }
                 }
             }

@@ -26,4 +26,4 @@ output_text = gr.outputs.Textbox(label="Translated Text")
 mode = gr.inputs.Radio(["en-ru", "ru-en"], label="Translation Mode")
 
 iface = gr.Interface(fn=translate, inputs=[input_text, mode], outputs=output_text)
-iface.launch()
+iface.launch(host='0.0.0.0', port=5000)

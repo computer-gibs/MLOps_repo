@@ -6,4 +6,4 @@ services:
     image: my_ml_app:latest
     container_name: my_ml_app_container
     ports:
-      - "5000:5001"
+      - "5000:8080"

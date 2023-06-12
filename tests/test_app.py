@@ -9,9 +9,21 @@ class TestApp(unittest.TestCase):
         result = translate(input_text, mode="en-ru")
         self.assertEqual(expected_output, result)
 
+        # Test for empty input
+        input_text = ""
+        expected_output = ""
+        result = translate(input_text, mode="en-ru")
+        self.assertEqual(expected_output, result)
+
     def test_ru_en_translation(self):
         input_text = "Привет, как дела?"
         expected_output = "Hello, how are you doing?"
+        result = translate(input_text, mode="ru-en")
+        self.assertEqual(expected_output, result)
+
+        # Test for empty input
+        input_text = ""
+        expected_output = ""
         result = translate(input_text, mode="ru-en")
         self.assertEqual(expected_output, result)
 

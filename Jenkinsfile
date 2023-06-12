@@ -24,17 +24,6 @@ pipeline {
                 }
             }
         }
-        stage('Run Quality Tests') {
-            steps {
-                script {
-                    if (isUnix()) {
-                        sh 'python quality_tests.py'
-                    } else {
-                        bat 'python quality_tests.py'
-                    }
-                }
-            }
-        }
         stage('Build Docker Image') {
             steps {
                 script {

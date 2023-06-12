@@ -35,13 +35,13 @@ pipeline {
                 }
             }
         }
-        stage('Push Docker Image') {
+        stage('Run Docker Container') {
             steps {
                 script {
                     if (isUnix()) {
-                        sh 'docker-compose push'
+                        sh 'docker-compose up -d'
                     } else {
-                        bat 'docker-compose push'
+                        bat 'docker-compose up -d'
                     }
                 }
             }

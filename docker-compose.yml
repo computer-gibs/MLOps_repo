@@ -4,3 +4,6 @@ services:
   my_ml_app:
     build: .
     image: my_ml_app:latest
+    container_name: my_ml_app_container
+    ports:
+      - "5000:8080"

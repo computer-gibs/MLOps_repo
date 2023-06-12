@@ -1,6 +1,6 @@
 import os
 import subprocess
-from ..app import translate
+from app import translate
 
 
 def test_translation_quality(input_text, expected_output, mode):

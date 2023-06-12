@@ -1,7 +1,6 @@
 import os
 import subprocess
-from app import translate
-translate.path.append("..")
+from ..app import translate
 
 
 def test_translation_quality(input_text, expected_output, mode):

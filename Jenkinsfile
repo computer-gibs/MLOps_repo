@@ -28,9 +28,9 @@ pipeline {
             steps {
                 script {
                     if (isUnix()) {
-                        sh 'python quality_tests.py'
+                        sh 'python tests/quality_tests.py'
                     } else {
-                        bat 'python quality_tests.py'
+                        bat 'python tests/quality_tests.py'
                     }
                 }
             }

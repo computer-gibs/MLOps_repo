@@ -9,7 +9,6 @@ class TestApp(unittest.TestCase):
         result = translate(input_text, mode="en-ru")
         self.assertEqual(expected_output, result)
 
-        # Test for empty input
         input_text = ""
         expected_output = ""
         result = translate(input_text, mode="en-ru")
@@ -21,7 +20,6 @@ class TestApp(unittest.TestCase):
         result = translate(input_text, mode="ru-en")
         self.assertEqual(expected_output, result)
 
-        # Test for empty input
         input_text = ""
         expected_output = ""
         result = translate(input_text, mode="ru-en")

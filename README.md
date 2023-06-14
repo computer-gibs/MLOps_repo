@@ -1,15 +1,14 @@
-# Переводчик (англ/рус, рус/англ)
+# Переводчик на Gradio
 Проект по дисциплине: "Автоматизация машинного обучения". 
 
-Приложение развернуто на [платформе HuggingFace]().
 # Функционал приложения
 Двусторонний перевод текста (с русского на английский и обратно).
 # Команда
-* [Елисей Старков](https://github.com/Ashen-Elish) — 
-* [Ярослав Алимпиев](https://github.com/Arimaro) — 
-* [Александр Никитин](https://github.com/AleksNikitin24) — 
-* [Александр Калиберда](https://github.com/computer-gibs) — тимлид
-* [Александра Григорьева](https://github.com/grigorieva0) — 
+* [Елисей Старков](https://github.com/Ashen-Elish) — настройка Continuous Integration и разработка unit-тестов
+* [Ярослав Алимпиев](https://github.com/Arimaro) — разработка пайплайна для Jenkins
+* [Александр Никитин](https://github.com/AleksNikitin24) — работа с dvc, docker
+* [Александр Калиберда](https://github.com/computer-gibs) — тимлид, разработка основного модуля
+* [Александра Григорьева](https://github.com/grigorieva0) — фикс всевозможных багов, написание документации
 # Ссылки на источники
 * [facebook/wmt19-ru-en](https://huggingface.co/facebook/wmt19-ru-en)*
 * [facebook/wmt19-en-ru](https://huggingface.co/facebook/wmt19-en-ru)*
